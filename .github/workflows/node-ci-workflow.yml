@@ -24,6 +24,7 @@ jobs:
         npm run commons:build
         npm run commons:package
         npm run commons:install
+        npm i angular-cli-ghpages -g
         npm run demo-app:build
         npm run test
       env:
