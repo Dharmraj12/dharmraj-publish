@@ -1,0 +1,5 @@
+<div id="mnl-profile-container" fxLayoutGap="15px">
+  <span id="mnl-userinfo-name" fxHide.xs>{{firstName}} {{lastName}}</span>
+  <button id="mnl-initials-button" mat-raised-button (click)="onProfileClick($event)"
+    mat-icon-button>{{firstName | mnlFirstLetter}}{{lastName | mnlFirstLetter}}</button>
+</div>

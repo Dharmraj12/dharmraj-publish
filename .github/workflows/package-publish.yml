@@ -1,0 +1,26 @@
+name: mnl-commons publishing to npm registry
+
+on:
+  pull_request:
+    branches: [development, master]
+    paths: 'projects/commons/**'
+    types: [closed]
+
+jobs:
+  publish-npm:
+    if: github.event.pull_request.merged
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          scope: '@muraai'
+      - name: Publishing Package to NPM Registry  
+        run: bash publish.sh
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_KEY}}

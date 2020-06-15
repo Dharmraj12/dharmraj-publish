@@ -1,0 +1,14 @@
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+@import 'custom-theme';
+@include mat-core();
+$primary: mat-palette($mat-indigo);
+$accent:  mat-palette($mat-pink, A200, A100, A400e);
+$warn:    mat-palette($mat-red);
+$theme:   mat-light-theme($primary, $accent, $warn);
+@include demo-app-theme($theme);
+
+body, html {
+  margin: 0;
+  height: 100%;
+}
+

@@ -1,0 +1,9 @@
+{
+    "MNL": {
+        "LOGIN": {
+            "LOGIN_BUTTON": "Anmeldung",
+            "USERNAME": "Nutzername",
+            "PASSWORD": "Passwort"
+        }
+    }
+}

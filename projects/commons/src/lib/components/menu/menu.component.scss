@@ -1,0 +1,21 @@
+.mnl-submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 15px !important;
+  }
+  .mnl-menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .mnl-menu-button.mnl-rotated {
+    transform: rotate(180deg);
+  }
+  .mnl-submenu.mnl-expanded {
+    transform: scaleY(1);
+  }
+
+  .mnl-menu{
+    margin-top: 5px;
+  }

@@ -1,0 +1,30 @@
+name: Muraai Ng Library Node CI
+
+on: 
+  pull_request:
+    paths: 'projects/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run lint
+        npm run commons:build
+        npm run commons:package
+        npm run commons:install
+        npm run demo-app:build
+        npm run test
+      env:
+        CI: true
