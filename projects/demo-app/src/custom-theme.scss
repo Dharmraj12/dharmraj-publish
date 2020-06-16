@@ -1,8 +1,0 @@
-@import '~@angular/material/theming';
-
-@import '~@muraai/mnl-commons/theming';
-
-@mixin demo-app-theme($theme) {
-  @include angular-material-theme($theme);
-  @include mnl-core-theme($theme);
-}

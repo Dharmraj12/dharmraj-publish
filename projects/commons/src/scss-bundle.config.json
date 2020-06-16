@@ -1,5 +1,0 @@
-{
-    "entry": "./projects/commons/src/lib/theming.scss",
-    "dest": "./dist/@muraai/mnl-commons/theming.scss"
-  }
-  
