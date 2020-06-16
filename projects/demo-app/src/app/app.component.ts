@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
     name: 'Demo-App', showMenuIcon: true,
     toolbarColor: 'primary', logo: 'http://muraai.com/wp-content/uploads/2019/12/new.png'
   };
-  menuData = [{ name: 'home',  icon: 'home', route: 'home' },
-              { name: 'Login', icon: 'login', route: 'login' }];
+  menuData = [{ name: 'home',  icon: 'home', route: '/home' },
+              { name: 'Login', icon: 'login', route: '/login' }];
   @ViewChild('sidenav') sidenav: MatSidenav;
   userFirstName: string;
   userLastName: string;

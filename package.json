@@ -11,7 +11,7 @@
     "commons:build": "ng build commons  --prod &&  scss-bundle -c projects/commons/src/scss-bundle.config.json",
     "commons:package": "cd dist/@muraai/mnl-commons && npm pack",
     "commons:install": "npm install cd dist/@muraai/mnl-commons",
-    "demo-app:build": "ng build  demo-app --base-href='.' && ngh --dir dist/demo-app"
+    "demo-app:build": "ng build  demo-app --base-href /dharmraj-publish/ && ngh --dir dist/demo-app"
   },
   "private": true,
   "dependencies": {
